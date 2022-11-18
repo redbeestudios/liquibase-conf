@@ -12,14 +12,12 @@ repositories {
 }
 
 dependencies {
-	implementation('org.liquibase:liquibase-core:4.17.2')
+	implementation("org.liquibase:liquibase-core:4.11.0")
 	implementation("org.liquibase.ext:liquibase-mongodb:4.13.0")
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.data:spring-data-mongodb")
 }
 
 tasks.named('test') {

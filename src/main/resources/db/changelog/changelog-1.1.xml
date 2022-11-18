@@ -7,6 +7,7 @@
 
 
         <changeSet id="20221118_1111_000" author="Lionel Scaloni">
+            <comment>Hola probando esto</comment>
             <ext:insertMany collectionName="arg_team">
                 <ext:documents>
                     [

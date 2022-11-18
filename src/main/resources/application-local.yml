@@ -4,7 +4,6 @@ spring:
       uri: mongodb://127.0.0.1:27017/team
       username: ""
       password: ""
-      field-naming-strategy: org.springframework.data.mapping.model.SnakeCaseFieldNamingStrategy
       auto-index-creation: true
       uuid-representation: standard
   liquibase:
@@ -12,5 +11,5 @@ spring:
     url: mongodb://localhost:27017/team
     enabled: true
     password: ""
-    user: ""
-    contexts: "int"
+    username: ""
+    context: "int"
