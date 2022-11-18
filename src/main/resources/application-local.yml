@@ -1,0 +1,8 @@
+spring:
+  liquibase:
+    change-log: classpath:db.changelog/changelog-master.xml
+    url: mongodb://localhost:27017/cars
+    enabled: true
+    password: ""
+    user: ""
+    contexts: "int"
