@@ -1,7 +1,15 @@
 spring:
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/team
+      username: ""
+      password: ""
+      field-naming-strategy: org.springframework.data.mapping.model.SnakeCaseFieldNamingStrategy
+      auto-index-creation: true
+      uuid-representation: standard
   liquibase:
-    change-log: classpath:db.changelog/changelog-master.xml
-    url: mongodb://localhost:27017/cars
+    change-log: classpath:db/changelog/changelog-master.xml
+    url: mongodb://localhost:27017/team
     enabled: true
     password: ""
     user: ""

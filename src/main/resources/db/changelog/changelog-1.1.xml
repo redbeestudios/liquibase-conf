@@ -1,0 +1,184 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+        <changeSet id="20221118_1111_000" author="Lionel Scaloni">
+            <ext:insertMany collectionName="arg_team">
+                <ext:documents>
+                    [
+                    {
+                        name: "Emiliano",
+                        last_name: "Martínez",
+                        team: "Aston Villa",
+                        number: 23
+                    },
+                    {
+                        name: "Gerónimo",
+                        last_name: "Rulli",
+                        team: "Villarreal",
+                        number: 12
+                    },
+                    {
+                        name: "Franco",
+                        last_name: "Armani",
+                        team: "River",
+                        number: 1
+                    },
+                    {
+                        name: "Nahuel",
+                        last_name: "Molina",
+                        team: "Atlético de Madrid",
+                        number: 26
+                    },
+                    {
+                        name: "Gonzalo",
+                        last_name: "Montiel",
+                        team: "Sevilla",
+                        number: 4
+                    },
+                    {
+                        name: "Cristian",
+                        last_name: "Romero",
+                        team: "Tottenham",
+                        number: 13
+                    },
+                    {
+                        name: "Germán",
+                        last_name: "Pezzella",
+                        team: "Betis",
+                        number: 6
+                    },
+                    {
+                        name: "Nicolás",
+                        last_name: "Otamendi",
+                        team: "Benfica",
+                        number: 19
+                    },
+                    {
+                        name: "Lisandro",
+                        last_name: "Martínez",
+                        team: "Manchester United",
+                        number: 25
+                    },
+                    {
+                        name: "Marcos",
+                        last_name: "Acuña",
+                        team: "Sevilla",
+                        number: 8
+                    },
+                    {
+                        name: "Nicolás",
+                        last_name: "Tagliafico",
+                        team: "Olympique de Lyon",
+                        number: 3
+                    },
+                    {
+                        name: "Juan",
+                        last_name: "Foyth",
+                        team: "Villarreal",
+                        number: 2
+                    },
+                    {
+                        name: "Rodrigo",
+                        last_name: "De Paul",
+                        team: "Atlético de Madrid",
+                        number: 7
+                    },
+                    {
+                        name: "Leandro",
+                        last_name: "Paredes",
+                        team: "Juventus",
+                        number: 5
+                    },
+                    {
+                        name: "Alexis",
+                        last_name: "Mac Allister",
+                        team: "Brighton",
+                        number: 20
+                    },
+                    {
+                        name: "Guido",
+                        last_name: "Rodríguez",
+                        team: "Betis",
+                        number: 18
+                    },
+                    {
+                        name: "Alejandro",
+                        last_name: "Gómez",
+                        team: "Sevilla",
+                        number: 17
+                    },
+                    {
+                        name: "Enzo",
+                        last_name: "Fernández",
+                        team: "Benfica",
+                        number: 24
+                    },
+                    {
+                        name: "Exequiel",
+                        last_name: "Palacios",
+                        team: "Bayer Leverkusen",
+                        number: 14
+                    },
+                    {
+                        name: "Thiago",
+                        last_name: "Almada",
+                        team: "Atlanta United",
+                        number: 16
+                    },
+                    {
+                        name: "Ángel",
+                        last_name: "Di María",
+                        team: "Juventus",
+                        number: 11
+                    },
+                    {
+                        name: "Lautaro",
+                        last_name: "Martínez",
+                        team: "Inter",
+                        number: 22
+                    },
+                    {
+                        name: "Julián",
+                        last_name: "Álvarez",
+                        team: "Manchester City",
+                        number: 9
+                    },
+                    {
+                        name: "Paulo",
+                        last_name: "Dybala",
+                        team: "Roma",
+                        number: 21
+                    },
+                    {
+                        name: "Ángel",
+                        last_name: "Correa",
+                        team: "Atlético Madrid",
+                        number: 15
+                    },
+                    {
+                        name: "Lionel",
+                        last_name: "Messi",
+                        team: "París Saint-Germain",
+                        number: 10
+                    }
+                    ]
+                </ext:documents>
+            </ext:insertMany>
+            <rollback>
+                <ext:runCommand>
+                    <ext:command>
+                        <!--@formatter:off-->
+                        {
+                        delete: "arg_team",
+                        deletes: [{q: {number: {$in: [23,12,1,26,4,13,6,19,25,8,3,2,7,5,20,18,17,24,14,16,11,22,9,21,15,10]}}}]
+                        <!--@formatter:on-->
+                    </ext:command>
+                </ext:runCommand>
+            </rollback>
+        </changeSet>
+</databaseChangeLog>

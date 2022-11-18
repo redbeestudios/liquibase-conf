@@ -1,0 +1,43 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="20221118_1111_000" author="Lionel Scaloni">
+            <ext:createCollection collectionName="arg_team">
+                <ext:options>
+                    {
+                    validator: {
+                        $jsonSchema: {
+                            bsonType: "object",
+                            required: ["name", "last_name", "team", "number"],
+                            properties: {
+                                name: {
+                                    bsonType: "string",
+                                    description: "Name"
+                                },
+                                last_name: {
+                                    bsonType: "string",
+                                    description: "Lastname"
+                                },
+                                team: {
+                                    bsonType: "string",
+                                    description: "Football team"
+                                },
+                                number: {
+                                    bsonType: "number",
+                                    description: "Number t-shirt"
+                                }
+                            }
+                        }
+                    }
+                    }
+                </ext:options>
+            </ext:createCollection>
+            <rollback>
+                <ext:dropCollection collectionName="arg_team"></ext:dropCollection>
+            </rollback>
+    </changeSet>
+</databaseChangeLog>
