@@ -1,0 +1,334 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <changeSet author="Lionel Scaloni" id="20221124_1111_000">
+        <comment>Se pone edades a los jugadores</comment>
+        <ext:runCommand>
+            <ext:command>
+                {
+                "update": "arg_team",
+                "updates": [
+                {
+                "q": {
+                "number": 23
+                },
+                "u": {
+                "$set": {
+                "age": 30
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 12
+                },
+                "u": {
+                "$set": {
+                "age": 30
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 1
+                },
+                "u": {
+                "$set": {
+                "age": 36
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 13
+                },
+                "u": {
+                "$set": {
+                "age": 24
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 25
+                },
+                "u": {
+                "$set": {
+                "age": 24
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 6
+                },
+                "u": {
+                "$set": {
+                "age": 31
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 19
+                },
+                "u": {
+                "$set": {
+                "age": 34
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 8
+                },
+                "u": {
+                "$set": {
+                "age": 31
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 3
+                },
+                "u": {
+                "$set": {
+                "age": 30
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 2
+                },
+                "u": {
+                "$set": {
+                "age": 24
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 4
+                },
+                "u": {
+                "$set": {
+                "age": 25
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 18
+                },
+                "u": {
+                "$set": {
+                "age": 28
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 5
+                },
+                "u": {
+                "$set": {
+                "age": 28
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 7
+                },
+                "u": {
+                "$set": {
+                "age": 28
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 24
+                },
+                "u": {
+                "$set": {
+                "age": 21
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 20
+                },
+                "u": {
+                "$set": {
+                "age": 23
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 14
+                },
+                "u": {
+                "$set": {
+                "age": 24
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 16
+                },
+                "u": {
+                "$set": {
+                "age": 21
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 17
+                },
+                "u": {
+                "$set": {
+                "age": 34
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 10
+                },
+                "u": {
+                "$set": {
+                "age": 35
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 15
+                },
+                "u": {
+                "$set": {
+                "age": 27
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 11
+                },
+                "u": {
+                "$set": {
+                "age": 34
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 21
+                },
+                "u": {
+                "$set": {
+                "age": 29
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 22
+                },
+                "u": {
+                "$set": {
+                "age": 25
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 9
+                },
+                "u": {
+                "$set": {
+                "age": 22
+                }
+                },
+                "upsert": false,
+                "multi": false
+                },
+                {
+                "q": {
+                "number": 26
+                },
+                "u": {
+                "$set": {
+                "age": 24
+                }
+                },
+                "upsert": false,
+                "multi": false
+                }
+                ],
+                "ordered": true
+                }
+            </ext:command>
+        </ext:runCommand>
+    </changeSet>
+</databaseChangeLog>
